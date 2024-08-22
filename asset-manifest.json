@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/monteCarlo/static/css/main.13ce20de.css",
-    "main.js": "/monteCarlo/static/js/main.1be7c5bd.js",
+    "main.css": "/monteCarlo/static/css/main.9e8aa0a8.css",
+    "main.js": "/monteCarlo/static/js/main.504fe3a7.js",
     "static/media/KaTeX_AMS-Regular.ttf": "/monteCarlo/static/media/KaTeX_AMS-Regular.853be92419a6c3766b9a.ttf",
     "static/media/KaTeX_Main-Regular.ttf": "/monteCarlo/static/media/KaTeX_Main-Regular.9eba1d77abcf2aa6e94e.ttf",
     "static/media/KaTeX_Main-Bold.ttf": "/monteCarlo/static/media/KaTeX_Main-Bold.8169508bf58f8bd92ad8.ttf",
@@ -63,11 +63,11 @@
     "static/media/KaTeX_Size3-Regular.woff": "/monteCarlo/static/media/KaTeX_Size3-Regular.7947224e8a9914fa332b.woff",
     "static/media/KaTeX_Size3-Regular.woff2": "/monteCarlo/static/media/KaTeX_Size3-Regular.e1951519f6f0596f7356.woff2",
     "index.html": "/monteCarlo/index.html",
-    "main.13ce20de.css.map": "/monteCarlo/static/css/main.13ce20de.css.map",
-    "main.1be7c5bd.js.map": "/monteCarlo/static/js/main.1be7c5bd.js.map"
+    "main.9e8aa0a8.css.map": "/monteCarlo/static/css/main.9e8aa0a8.css.map",
+    "main.504fe3a7.js.map": "/monteCarlo/static/js/main.504fe3a7.js.map"
   },
   "entrypoints": [
-    "static/css/main.13ce20de.css",
-    "static/js/main.1be7c5bd.js"
+    "static/css/main.9e8aa0a8.css",
+    "static/js/main.504fe3a7.js"
   ]
 }
