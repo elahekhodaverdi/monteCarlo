@@ -25,8 +25,8 @@ const App = () => {
   }, []);
 
   const generateRandomPoint = () => {
-    const x = Math.random() * R;
-    const y = Math.random() * R;
+    const x = Math.random() * 360;
+    const y = Math.random() * 360;
     return { x, y };
   };
 
