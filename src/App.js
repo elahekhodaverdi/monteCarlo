@@ -11,14 +11,13 @@ const { Title, Paragraph } = Typography;
 const App = () => {
   const [points, setPoints] = useState([]);
   const [insideCircle, setInsideCircle] = useState(0);
-  const [R, setR] = useState(window.innerWidth < 412 ? 240 : 360);  // Set initial R based on screen width
-  const [buttonSize, setButtonSize] = useState(window.innerWidth < 412 ? "small" : "large");
+  const [R, setR] = useState(window.innerWidth <= 460 ? 240 : 360);
+  const [buttonSize, setButtonSize] = useState(window.innerWidth <= 460 ? "small" : "large");
   const radius = R / 2;
-
   useEffect(() => {
     const handleResize = () => {
-      setR(window.innerWidth < 412 ? 240 : 360);
-      setButtonSize(window.innerWidth < 412 ? "small" : "large");
+      setR(window.innerWidth <= 460 ? 240 : 360);
+      setButtonSize(window.innerWidth <= 460 ? "small" : "large");
     };
 
     window.addEventListener('resize', handleResize);
@@ -32,7 +31,7 @@ const App = () => {
   };
 
   const isInsideCircle = (x, y) => {
-    if (R === 240)  {
+    if (R === 240) {
       x = (x * 240) / 360;
       y = (y * 240) / 360;
     }
@@ -53,15 +52,16 @@ const App = () => {
             y = (point.y * 240) / 360;
           }
           return (
-          <div
-            key={index}
-            className="point"
-            style={{
-              left: `${x - 2}px`,
-              top: `${y - 2}px`,
-            }}
-          ></div>
-        )})}
+            <div
+              key={index}
+              className="point"
+              style={{
+                left: `${x - 2}px`,
+                top: `${y - 2}px`,
+              }}
+            ></div>
+          )
+        })}
       </div>
     </div>
   );
@@ -91,7 +91,7 @@ const App = () => {
         <br />
         <Latex>{`\\(\\frac{${insideCircle}}{${totalPoints}} \\approx \\frac{\\pi \\times r^2}{4 \\times r^2} \\approx \\frac{\\pi \\times \\cancel{r^2}}{4 \\times \\cancel{r^2}} \\approx \\frac{\\pi}{4}\\)`}</Latex>
         <Paragraph style={{ marginTop: "16px" }}>
-          Nice! Our ratio is approximately one-fourth of <Latex>{`\\(\\pi\\)`}</Latex>: 
+          Nice! Our ratio is approximately one-fourth of <Latex>{`\\(\\pi\\)`}</Latex>:
           <br />
           <Latex>{`\\(\\pi \\approx 4 \\times \\frac{${insideCircle}}{${totalPoints}} \\approx ${approxPi}\\)`}</Latex>
         </Paragraph>
