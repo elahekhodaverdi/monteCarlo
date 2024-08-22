@@ -32,6 +32,10 @@ const App = () => {
   };
 
   const isInsideCircle = (x, y) => {
+    if (R === 240)  {
+      x = (x * 240) / 360;
+      y = (y * 240) / 360;
+    }
     const dx = x - radius;
     const dy = y - radius;
     return dx * dx + dy * dy <= radius * radius;
@@ -41,16 +45,23 @@ const App = () => {
     <div className="shapes-container">
       <div className="square" style={{ width: `${R}px`, height: `${R}px` }}>
         <div className="circle" style={{ width: `${R}px`, height: `${R}px` }}></div>
-        {points.map((point, index) => (
+        {points.map((point, index) => {
+          let x = point.x;
+          let y = point.y;
+          if (R === 240) {
+            x = (point.x * 240) / 360;
+            y = (point.y * 240) / 360;
+          }
+          return (
           <div
             key={index}
             className="point"
             style={{
-              left: `${point.x - 2}px`,
-              top: `${point.y - 2}px`,
+              left: `${x - 2}px`,
+              top: `${y - 2}px`,
             }}
           ></div>
-        ))}
+        )})}
       </div>
     </div>
   );
